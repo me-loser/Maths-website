@@ -1,0 +1,228 @@
+body{
+    font: Arial,Helvetica,sans-serif;
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+#container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+   
+}
+#header{
+/*    height: 100px;*/
+    padding: 10px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+h1 a{
+    font-size: 40px;
+    font-weight: 100;
+    text-decoration: none;
+    color: #861BBF;
+}
+#brand{
+/*    flex: 1;*/
+/*    min-width: 400px;*/
+/*    second method for this is by setting flex with percentages.*/
+    flex: 50%;
+}
+#searchBox{
+    flex: 50%;
+    background: linear-gradient(#E4F2B9,#B7E953);
+    background: -webkit-linear-gradient(#E4F2B9,#B7E953);
+    background: -o-linear-gradient(#E4F2B9,#B7E953);
+    background: -moz-linear-gradient(#E4F2B9,#B7E953);
+    min-width: 400px;
+/*    height: 50px;*/
+    padding: 20px;
+/*    margin-top: 20px;*/
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.text{
+     float: left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: #E36ABC;
+    background: white url(images/search.png) 175px center no-repeat;
+    border: 1px solid #C8D03E;
+    
+}
+.submit{
+    float: right;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+    background: #A75106;
+    
+}
+.clear{
+    clear: both;
+}
+#menu{
+/*    height: 70px;*/
+    background: linear-gradient(#F8F594,#D5D533);
+    background: -webkit-linear-gradient(#F8F594,#D5D533);
+    background: -o-linear-gradient(#F8F594,#D5D533);
+    background: -moz-linear-gradient(#F8F594,#D5D533);
+    padding: 20px 0px;
+   
+}
+ul{
+    list-style: none;
+   
+}
+#menu ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+#menu ul li{
+/*    float: left;*/
+    padding: 0px 30px; 
+/*    height: 30px;*/
+    border-right: solid;
+    border-right-width: 1px;
+    border-right-color: #5d12e7; 
+}
+
+#menu ul li:last-child{
+    border-right: none;
+}
+#menu ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: #5d12e7;
+/*    line-height: 30px;*/
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+
+}
+#menu ul li a:hover,#menu ul li a.active{
+    font-size: 20px;
+    font-weight: bold;
+    color: #B314DB;
+}
+/*small screens: vertical menu*/
+@media screen and (max-width: 700px){
+    #menu ul{
+        flex-direction: column;
+        align-content: center;
+    }
+    #menu ul li{
+        border-right: none;
+    }
+/*
+    .bars{
+        flex-direction: column;
+    }
+*/
+}
+#introduction{
+    background: linear-gradient(#E5F2BB,#B7E952);
+    background: -webkit-linear-gradient(#E5F2BB,#B7E952);
+    background: -o-linear-gradient(#E5F2BB,#B7E952);
+    background: -moz-linear-gradient(#E5F2BB,#B7E952);
+    margin: 16px 0px;
+    padding: 30px;
+}
+#introduction h3{
+    font-weight: normal;
+    font-size: 45px;
+    color: #316901
+}
+#introduction p{
+    font-size: 25px;
+    color: #628F19;
+    text-align: justify;     
+}
+.bars{
+    display: flex;
+   flex-wrap: wrap;
+}
+.sidebarwrapper{
+    flex: 50%;
+    padding: 10px;
+}
+.sidebar{
+    height: 100%;
+    width: 100%;
+    border: 2px solid #BAF46F;
+    border-radius: 20px;
+    padding: 10px 30px;
+/*    flex: 1;*/
+/*   but their is problem that when we shrink the web page the flex items do not shrink in the same proportion.*/
+/*    so its solution is to set flex to flex basis bot now I cannot add margin to the boxes.So, I have to put these sidebars in new divisions and add padding to them.*/
+}
+#leftsidebar{
+/*    float: left;*/
+    margin-right: 5px;
+    
+}
+#rightsidebar{
+/*    float: right;*/
+    margin-left: 5px;
+   
+}
+.sidebar h3{
+    font-size: 30px;
+    
+    color: #B314DB;
+}
+
+
+#leftsidebar ul li{
+    
+    padding: 4px 0px 4px 10px;
+    list-style-image: url(images/arrow.png);
+}
+
+
+.sidebar ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #5d12e7;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    transition: font-size 0.3s ease;
+}
+.sidebar ul li a:hover{
+    text-decoration: none;
+    color: #B314DB;
+    font-size: 23px;
+    font-weight: bold;
+}
+#rightsidebar ul li{
+    padding: 17px 0px 17px 70px;
+    background: url(images/tick.png) no-repeat left center;
+}
+
+.footer{
+    height: 60px;
+    background: linear-gradient(#F6F390,#D5D533);
+    background: -webkit-linear-gradient(#F6F390,#D5D533);
+    background: -o-linear-gradient(#F6F390,#D5D533);
+    background: -moz-linear-gradient(#F6F390,#D5D533);
+    margin-top: auto;
+    padding: 10px 30px;
+}
+
